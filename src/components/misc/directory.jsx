@@ -8,24 +8,17 @@ const mapStateToProps = () => ({
 
 const Directory = ({categories}) => {
     return (
-        <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-expand-lg p-1">
-            <button className="navbar-toggler" data-toggle="collapse" data-target="#directoryList">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="directoryList">
-                <ul className="navbar-nav text-md-center nav-justified w-100">
+        <nav className="sidebar-container">
+            <div className="sidebar bar-dark">
                 {
-                    categories.map((category) => (
-                        <li className="nav-item" key={category.id}>
-                            <Link
-                                className="nav-link small text-light"
-                                to={`/${category.title.toLowerCase()}`}>
-                                    {category.title.toUpperCase()}
-                            </Link>
-                        </li>)
+                    categories.map( (category) => (
+                        <Link key={category.id} className="sidebar-items link-light"
+                            to={`/${category.title.toLowerCase()}`}>
+                            <span className="item-icon material-icons">{category.icon}</span>
+                            <span className="item-name small"> {category.title.toUpperCase()} </span>
+                        </Link>)
                     )
                 }
-                </ul>
             </div>
         </nav>
     );

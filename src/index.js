@@ -2,8 +2,7 @@ import { ReactDOM, React, BrowserRouter, Provider, PersistGate, ScrollToTop } fr
 import {store, persistor} from "./redux/store";
 import App from "./App";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "./css/theme.css";
+import "./css/dist/css/main.css";
 
 ReactDOM.render(
   <Provider store = {store}>

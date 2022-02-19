@@ -33,10 +33,12 @@ class ProductPage extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <Directory/>
-                <div className ="container">
-                    <Breadcrum sections={this.props.breadcrumSections}/>
-                    <ProductDetails/>
+                <div className="grid">
+                    <Directory/>
+                    <div className ="container">
+                        <Breadcrum sections={this.props.breadcrumSections}/>
+                        <ProductDetails/>
+                    </div>
                 </div>
             </React.Fragment>
         );

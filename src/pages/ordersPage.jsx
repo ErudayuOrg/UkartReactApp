@@ -31,11 +31,13 @@ class OrdersPage extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <Directory/>
-                <div className="container">
-                    <div className="row">
-                        <div className="offset-md-1 col-md-10">
-                            <OrdersList />
+                <div className="grid">
+                    <Directory/>
+                    <div className="container">
+                        <div className="row">
+                            <div className="offset-md-1 col-md-10">
+                                <OrdersList />
+                            </div>
                         </div>
                     </div>
                 </div>

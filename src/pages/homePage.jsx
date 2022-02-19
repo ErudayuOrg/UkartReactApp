@@ -42,12 +42,14 @@ class HomePage extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <Directory/>
-                <div className="_light_bg">
-                    <Banner items={caroselitems}/>
-                    <ProductSlider products = {trending} title="Trending Offers"/>
-                    <ProductSlider products = {fashions} title="Fashions" link="/fashion"/>
-                    <ProductSlider products = {electronics} title="Electronics" link="/electronics"/>
+                <div className="grid">
+                    <Directory/>
+                    <div className="_light_bg">
+                        <Banner items={caroselitems}/>
+                         <ProductSlider products = {trending} title="Trending Offers"/>
+                        {/*<ProductSlider products = {fashions} title="Fashions" link="/fashion"/>
+                        <ProductSlider products = {electronics} title="Electronics" link="/electronics"/> */}
+                    </div>
                 </div>
             </React.Fragment>
         );

@@ -32,11 +32,14 @@ class DirectoryPage extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                <Directory/>
-                <div className ="container">
-                    <Breadcrum sections = {breadcrumSections}/>
-                    <ProductList products = {productsByType}/>
+                <div className="grid">
+                    <Directory/>
+                    <div className ="container">
+                        <Breadcrum sections = {breadcrumSections}/>
+                        <ProductList products = {productsByType}/>
+                    </div>
                 </div>
+                
             </React.Fragment>
         );
     }

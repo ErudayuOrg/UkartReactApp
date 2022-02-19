@@ -21,30 +21,32 @@ class OrderDetailsPage extends Component{
         return(
             <React.Fragment>
                 <Header/>
-                <Directory/>
-                <Tile className="container my-3">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <OrderedAddress address={order.deliveryAddress}/>
+                <div className="grid">
+                    <Directory/>
+                    <Tile className="container my-3">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <OrderedAddress address={order.deliveryAddress}/>
+                            </div>
                         </div>
-                    </div>
-                </Tile>
-                <Tile className="container my-3">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <OrderedProduct
-                                productId={product.productId}
-                                productName={product.productName}
-                                thumnail={product.productImage}
-                                sellerId={product.sellerId}
-                                price={numberToPrice(order.orderPrice)}
-                            />
+                    </Tile>
+                    <Tile className="container my-3">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <OrderedProduct
+                                    productId={product.productId}
+                                    productName={product.productName}
+                                    thumnail={product.productImage}
+                                    sellerId={product.sellerId}
+                                    price={numberToPrice(order.orderPrice)}
+                                />
+                            </div>
+                            <div className="col-md-6">
+                                <OrderTracker statusTrack = {order.statusTrack}/>
+                            </div>
                         </div>
-                        <div className="col-md-6">
-                            <OrderTracker statusTrack = {order.statusTrack}/>
-                        </div>
-                    </div>
-                </Tile>
+                    </Tile>
+                </div>
             </React.Fragment>)
     }
 }
